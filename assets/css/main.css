@@ -120,6 +120,11 @@ input, select, textarea {
 		text-decoration: none;
 	}
 
+	a img {
+		vertical-align: middle; /* Aligns the image to remove the line underneath */
+		display: inline-block; /* Treats the image as a block element within the link */
+	}
+
 		a:hover {
 			border-bottom-color: transparent;
 			/* color: #4acaa8 !important; */
