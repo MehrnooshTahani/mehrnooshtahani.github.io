@@ -61,7 +61,7 @@
 
 			$nav_a
 				.addClass('scrolly')
-				.on('click', function(e) {
+				.on('click', function() {
 
 					var $this = $(this);
 
@@ -70,15 +70,14 @@
 							return;
 
 					// Deactivate all links.
-					$nav_a.removeClass('active').removeClass('active-locked');
+						$nav_a.removeClass('active');
 
-					// Activate link and lock it
-					$this
-						.addClass('active')
-						.addClass('active-locked');
+					// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
+						$this
+							.addClass('active')
+							.addClass('active-locked');
+
 				})
-
-				
 				.each(function() {
 
 					var	$this = $(this),
@@ -120,21 +119,6 @@
 							}
 						});
 
-				});
-				$(window).on('scroll', function() {
-					var scrollPosition = $(window).scrollTop() + 100;
-				
-					$('section[id]').each(function() {
-						var $section = $(this);
-						var sectionTop = $section.offset().top;
-						var sectionHeight = $section.height();
-						var sectionId = $section.attr('id');
-						
-						if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-							$nav_a.removeClass('active');
-							$nav_a.filter('[href="#' + sectionId + '"]').addClass('active');
-						}
-					});
 				});
 
 		// Title Bar.
