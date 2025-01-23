@@ -61,7 +61,7 @@
 
 			$nav_a
 				.addClass('scrolly')
-				.on('click', function() {
+				.on('click', function(e) {
 
 					var $this = $(this);
 
@@ -70,14 +70,15 @@
 							return;
 
 					// Deactivate all links.
-						$nav_a.removeClass('active');
+					$nav_a.removeClass('active').removeClass('active-locked');
 
-					// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
-						$this
-							.addClass('active')
-							.addClass('active-locked');
-
+					// Activate link and lock it
+					$this
+						.addClass('active')
+						.addClass('active-locked');
 				})
+
+				
 				.each(function() {
 
 					var	$this = $(this),
