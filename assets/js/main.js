@@ -120,6 +120,21 @@
 						});
 
 				});
+				$(window).on('scroll', function() {
+					var scrollPosition = $(window).scrollTop() + 100;
+				
+					$('section[id]').each(function() {
+						var $section = $(this);
+						var sectionTop = $section.offset().top;
+						var sectionHeight = $section.height();
+						var sectionId = $section.attr('id');
+						
+						if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+							$nav_a.removeClass('active');
+							$nav_a.filter('[href="#' + sectionId + '"]').addClass('active');
+						}
+					});
+				});
 
 		// Title Bar.
 			$titleBar = $(
