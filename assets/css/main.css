@@ -2775,7 +2775,7 @@ input, select, textarea {
 			-webkit-flex-shrink: 0;
 			-ms-flex-shrink: 0;
 			flex-shrink: 0;
-			padding: 3em;
+			padding: 3em 3em 1.5em 3em;
 		}
 
 			#header > header .avatar {
@@ -2812,6 +2812,71 @@ input, select, textarea {
 
 				#header > footer .icons li a {
 					color: #b7eadc;
+				}
+
+		#header > header .project-links {
+				background: rgba(0,0,0,0.30);
+				border: 2px solid rgba(255,255,255,0.35);
+				border-radius: 8px;
+				margin-top: 1.25em;
+				padding: 1em 1em 0.75em;
+			}
+
+				#header > header .project-links .project-links-label {
+					font-size: 0.62em !important;
+					font-style: normal !important;
+					letter-spacing: 0.14em;
+					text-transform: uppercase;
+					color: rgba(255,255,255,0.55);
+					margin: 0 0 0.65em 0 !important;
+				}
+
+				#header > header .project-links ul {
+					list-style: none !important;
+					margin: 0 !important;
+					padding: 0 !important;
+				}
+
+				#header > header .project-links ul li {
+					border: none !important;
+					list-style: none !important;
+					margin-bottom: 0.4em !important;
+					padding: 0 !important;
+				}
+
+				#header > header .project-links ul li a {
+					align-items: center;
+					background: rgba(0,0,0,0.28) !important;
+					border: none !important;
+					border-bottom: none !important;
+					border-radius: 6px;
+					color: #ffffff !important;
+					display: flex !important;
+					font-size: 0.85em;
+					font-weight: 600;
+					gap: 0.6em;
+					letter-spacing: 0.02em;
+					padding: 0.55em 0.9em;
+					text-decoration: none;
+					transition: background 0.2s ease !important;
+				}
+
+				#header > header .project-links ul li a:hover {
+					background: rgba(0,0,0,0.45) !important;
+					color: #ffffff !important;
+				}
+
+				#header > header .project-links ul li a .pb-icon {
+					flex-shrink: 0 !important;
+					font-style: normal;
+					display: inline-block !important;
+					height: 20px !important;
+					width: 20px !important;
+					max-height: 20px !important;
+					max-width: 20px !important;
+					object-fit: contain !important;
+					border-radius: 3px;
+					vertical-align: middle;
 				}
 
 		#header > nav {
@@ -2875,6 +2940,13 @@ input, select, textarea {
 		#main > section:first-child {
 			border-top: 0;
 		}
+
+	#main .container h2 {
+		border-bottom: 3px solid var(--maincolor);
+		display: inline-block;
+		padding-bottom: 0.3em;
+		margin-bottom: 0.75em;
+	}
 
 /* Footer */
 
