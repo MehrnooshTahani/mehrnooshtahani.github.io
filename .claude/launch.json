@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "jekyll-dev",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "4000"],
+      "runtimeExecutable": "bundle",
+      "runtimeArgs": ["exec", "jekyll", "serve", "--port", "4000", "--skip-initial-build", "--watch"],
       "port": 4000
     }
   ]

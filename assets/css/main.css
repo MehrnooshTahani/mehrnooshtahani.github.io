@@ -3505,11 +3505,95 @@ html {
   #header > nav ul li a:hover,
   #header > nav ul li a:active,
   #header > nav ul li a:focus,
-  #header > nav ul li a.active 
+  #header > nav ul li a.active
   #header > nav ul li a:focus-within {
 	background: rgba(255, 255, 255, 0.1) !important;
 	font-weight: bold;
   }
+
+/* Research area cards */
+.research-intro {
+    margin-bottom: 2em;
+    line-height: 1.7;
+}
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5em;
+    margin-top: 0.5em;
+}
+
+.research-card {
+    background: #f8f9fb;
+    border: 1px solid #dde3ee;
+    border-radius: 8px;
+    padding: 0 1.5em 1.25em;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.research-card-img {
+    display: block;
+    width: calc(100% + 3em);
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 -1.5em 1.25em -1.5em;
+    border-radius: 7px 7px 0 0;
+}
+
+.research-card-title {
+    font-size: 0.95em !important;
+    font-weight: 700 !important;
+    color: var(--maincolor) !important;
+    border-bottom: 2px solid var(--maincolor);
+    padding-bottom: 0.4em;
+    margin: 0 0 0.85em 0 !important;
+    letter-spacing: 0.01em;
+    text-transform: none !important;
+    display: block !important;
+}
+
+.research-card p {
+    font-size: 0.88em;
+    line-height: 1.65;
+    flex-grow: 1;
+    margin-bottom: 1em;
+    color: #444;
+}
+
+.research-ads-link {
+    display: inline-block;
+    margin-top: auto;
+    font-size: 0.82em !important;
+    font-weight: 600;
+    color: var(--maincolor) !important;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    border: none !important;
+    border-bottom: none !important;
+    padding: 0;
+    transition: color 0.2s ease !important;
+}
+
+.research-ads-link:hover {
+    color: var(--maincolor-light) !important;
+    border-bottom: none !important;
+}
+
+@media screen and (max-width: 980px) {
+    .research-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 
 
