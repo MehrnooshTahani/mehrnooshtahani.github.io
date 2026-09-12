@@ -3,4 +3,5 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - "*.pdf"
+  - MTahani_Iranian.pdf
+  - MTahani_KeplerLecture.pdf
