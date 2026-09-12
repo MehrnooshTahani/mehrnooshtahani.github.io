@@ -3595,5 +3595,31 @@ html {
     }
 }
 
+.software-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 2em;
+}
+
+.software-row p {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.software-logo {
+    flex: 0 0 22%;
+    display: block;
+    border: none !important;
+}
+
+.software-logo img {
+    display: block;
+    width: 100%;
+}
+
+#teaching .software-logo {
+    flex: 0 0 30%;
+}
+
 
 
